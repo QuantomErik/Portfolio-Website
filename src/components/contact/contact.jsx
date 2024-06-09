@@ -60,12 +60,18 @@
 export default Contact;
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 
 function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');
+
+  useEffect(() => {
+    console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
+    console.log('Template ID:', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+    console.log('Public Key:', process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -84,10 +90,10 @@ function Contact() {
 
     try {
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY // Use the public key here
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY // Use the public key here
       );
       setStatus('Message sent!');
       setFormData({ name: '', email: '', message: '' });
@@ -137,4 +143,6 @@ function Contact() {
 }
 
 export default Contact;
+
+
 
