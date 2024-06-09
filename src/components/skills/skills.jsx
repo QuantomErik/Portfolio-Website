@@ -279,7 +279,79 @@ export default Skills; */
 
 
 
-import React from 'react';
+
+
+/* import React from 'react';
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaGitlab, FaGithub } from 'react-icons/fa';
+import { DiMongodb } from 'react-icons/di';
+import { SiTailwindcss, SiFlutter, SiExpress, SiRedux, SiSocketdotio, SiJenkins } from 'react-icons/si';
+import { motion } from 'framer-motion';
+
+const skills = {
+  frontend: [
+    { name: 'HTML', icon: <FaHtml5 /> },
+    { name: 'CSS', icon: <FaCss3Alt /> },
+    { name: 'JavaScript', icon: <FaJs /> },
+    { name: 'React', icon: <FaReact /> },
+    { name: 'Redux', icon: <SiRedux /> },
+    { name: 'Flutter/Dart', icon: <SiFlutter /> },
+    { name: 'Tailwind', icon: <SiTailwindcss /> },
+  ],
+  backend: [
+    { name: 'Node.js', icon: <FaNodeJs /> },
+    { name: 'Express', icon: <SiExpress /> },
+    { name: 'MongoDB', icon: <DiMongodb /> },
+    { name: 'RESTful APIs', icon: <FaDatabase /> },
+    { name: 'Socket.IO', icon: <SiSocketdotio /> },
+    { name: 'JWT', icon: <FaDatabase /> },
+  ],
+  frameworks: [
+    { name: 'MongoDB Atlas', icon: <DiMongodb /> },
+    { name: 'Jest', icon: <FaDatabase /> },
+    { name: 'Testcafe', icon: <FaDatabase /> },
+  ],
+  devops: [
+    { name: 'GitHub', icon: <FaGithub /> },
+    { name: 'GitLab', icon: <FaGitlab /> },
+    { name: 'CI/CD', icon: <SiJenkins /> }, // Use Jenkins as a general icon for CI/CD
+  ]
+};
+
+const Skills = () => {
+  const categories = [
+    { name: 'Front-End Skills', skills: skills.frontend, color: 'text-blue-500' },
+    { name: 'Back-End Skills', skills: skills.backend, color: 'text-green-500' },
+    { name: 'Frameworks & Libraries', skills: skills.frameworks, color: 'text-purple-500' },
+    { name: 'DevOps & Tooling', skills: skills.devops, color: 'text-red-500' },
+  ];
+
+  return (
+    <div className="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-10 justify-center items-center">
+      {categories.map((category) => (
+        <motion.div
+          key={category.name}
+          className="bg-gray-900 p-8 rounded-lg shadow-lg flex flex-col items-center text-center w-full lg:w-1/3"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+        >
+          <h2 className={`text-3xl font-bold mb-4 ${category.color}`}>{category.name}</h2>
+          <div className="grid grid-cols-2 gap-4">
+            {category.skills.map((skill) => (
+              <div key={skill.name} className="flex flex-col items-center space-y-2">
+                <div className={`text-3xl ${category.color}`}>{skill.icon}</div>
+                <span className="text-xl text-white">{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+};
+
+export default Skills; */
+
+/* import React from 'react';
 import ComputerIcon from '@mui/icons-material/Computer';
 import StorageIcon from '@mui/icons-material/Storage';
 import BuildIcon from '@mui/icons-material/Build';
@@ -310,7 +382,7 @@ const Skills = () => {
         <div className="p-5">
           <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Back-End Skills</h5>
           <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-            Node.js, Express, MongoDB, RESTful APIs, Socket.IO, JWT, Ubuntu, Docker, NginX
+            Node.js, Java, Express, MongoDB, RESTful APIs, Web socket, JWT, Ubuntu, Docker, NginX, Micro Services
           </p>
         </div>
       </div>
@@ -322,54 +394,7 @@ const Skills = () => {
         <div className="p-5">
           <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Frameworks & Libraries</h5>
           <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-            Redux, MongoDB Atlas, Base64, Jest, Testcafe
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Skills;
-
-/* import React from 'react';
-import { Code, Database, Tool } from 'react-feather';
-
-const Skills = () => {
-  return (
-    <div className="flex justify-center items-center flex-wrap skills-container">
-      <div className="flex-1 min-w-0 max-w-xs md:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3 skill-card">
-        <div className="flex justify-center items-center bg-blue-500 rounded-t-lg p-5">
-          <Code className="text-white" size={48} />
-        </div>
-        <div className="p-5">
-          <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Front-End Skills</h5>
-          <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-            HTML, CSS, JavaScript, React, Redux, Flutter/Dart, Bootstrap, Tailwind
-          </p>
-        </div>
-      </div>
-
-      <div className="flex-1 min-w-0 max-w-xs md:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3 skill-card">
-        <div className="flex justify-center items-center bg-green-500 rounded-t-lg p-5">
-          <Database className="text-white" size={48} />
-        </div>
-        <div className="p-5">
-          <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Back-End Skills</h5>
-          <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-            Node.js, Express, MongoDB, RESTful APIs, Socket.IO, JWT
-          </p>
-        </div>
-      </div>
-
-      <div className="flex-1 min-w-0 max-w-xs md:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3 skill-card">
-        <div className="flex justify-center items-center bg-purple-500 rounded-t-lg p-5">
-          <Tool className="text-white" size={48} />
-        </div>
-        <div className="p-5">
-          <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Frameworks & Libraries</h5>
-          <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-            Redux, MongoDB Atlas, Ubuntu, Base64
+            Redux, Base64, Jest, Testcafe, Bcrypt
           </p>
         </div>
       </div>
@@ -378,6 +403,74 @@ const Skills = () => {
 };
 
 export default Skills; */
+
+
+import React from 'react';
+import ComputerIcon from '@mui/icons-material/Computer';
+import StorageIcon from '@mui/icons-material/Storage';
+import BuildIcon from '@mui/icons-material/Build';
+import SettingsIcon from '@mui/icons-material/Settings';
+
+const Skills = () => {
+  return (
+    <div className="flex justify-center items-center flex-wrap skills-container">
+      
+      <div className="flex-1 min-w-0 max-w-xs md:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3 skill-card">
+        <div className="flex justify-center items-center bg-blue-500 rounded-t-lg p-5">
+          <ComputerIcon style={{ fontSize: 48, color: 'white' }} />
+        </div>
+        <div className="p-5">
+          <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Front-End Skills</h5>
+          <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
+          JavaScript, HTML, CSS, React, Redux, Flutter/Dart, Bootstrap, Tailwind
+          </p>
+        </div>
+      </div>
+
+      <div className="flex-1 min-w-0 max-w-xs md:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3 skill-card">
+        <div className="flex justify-center items-center bg-green-500 rounded-t-lg p-5">
+          <StorageIcon style={{ fontSize: 48, color: 'white' }} />
+        </div>
+        <div className="p-5">
+          <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Back-End Skills</h5>
+          <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
+            Node.js, Java, Express, MongoDB, RESTful APIs, WebSocket, JsonWebToken, Micro Services
+          </p>
+        </div>
+      </div>
+
+      <div className="flex-1 min-w-0 max-w-xs md:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3 skill-card">
+        <div className="flex justify-center items-center bg-purple-500 rounded-t-lg p-5">
+          <BuildIcon style={{ fontSize: 48, color: 'white' }} />
+        </div>
+        <div className="p-5">
+          <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Frameworks & Libraries</h5>
+          <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
+            Redux, Base64, Jest, Testcafe, Bcrypt
+          </p>
+        </div>
+      </div>
+
+      <div className="flex-1 min-w-0 max-w-xs md:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3 skill-card">
+        <div className="flex justify-center items-center bg-red-500 rounded-t-lg p-5">
+          <SettingsIcon style={{ fontSize: 48, color: 'white' }} />
+        </div>
+        <div className="p-5">
+          <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">DevOps & Tools</h5>
+          <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
+            GitHub, GitLab, CI/CD, Docker, NginX, Ubuntu
+          </p>
+        </div>
+      </div>
+
+    </div>
+  );
+};
+
+export default Skills;
+
+
+
 
 
 

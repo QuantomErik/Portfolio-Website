@@ -8,8 +8,8 @@ const ProjectCards = () => {
       title: "Petsee",
       description: "Application for pet monitoring.",
       image: "src/components/projects/petsee.png",
-      liveDemoLink: "#",
-      githubLink: "#",
+      liveDemoLink: "https://cscloud7-95.lnu.se/petsee",
+      githubLink: "https://github.com/QuantomErik/Petsee-Pet-Monitor",
       tools: [
         { icon: <FaJsSquare className="text-blue-500" />, name: 'JavaScript' },
         { icon: <FaReact className="text-blue-500" />, name: 'React' },
@@ -43,8 +43,8 @@ const ProjectCards = () => {
       title: "PWA",
       description: "Progressive web application containing a memory game, websocket chat and a weather app.",
       image: "src/components/projects/pwa.png",
-      liveDemoLink: "#",
-      githubLink: "#",
+      liveDemoLink: "https://unique-macaron-88f8eb.netlify.app",
+      githubLink: "https://github.com/QuantomErik/PWA",
       tools: [
         { icon: <FaJsSquare />, name: 'JavaScript' }
       ]
