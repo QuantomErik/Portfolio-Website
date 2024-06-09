@@ -53,6 +53,9 @@ const ProjectCards = () => {
 
   return (
     <div className="container mx-auto p-6">
+
+<h2 className="text-3xl font-bold mb-10">Projects</h2>
+
       <div className="grid grid-cols-3 gap-6 mb-6">
         <div className="col-span-2 relative bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden h-96">
           <img className="w-full h-full object-cover absolute inset-0 z-0" src={projects[0].image} alt={projects[0].title} />

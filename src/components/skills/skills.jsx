@@ -286,7 +286,11 @@ import BuildIcon from '@mui/icons-material/Build';
 
 const Skills = () => {
   return (
+
     <div className="flex justify-center items-center flex-wrap skills-container">
+
+
+      
       <div className="flex-1 min-w-0 max-w-xs md:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3 skill-card">
         <div className="flex justify-center items-center bg-blue-500 rounded-t-lg p-5">
           <ComputerIcon style={{ fontSize: 48, color: 'white' }} />
@@ -306,7 +310,7 @@ const Skills = () => {
         <div className="p-5">
           <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Back-End Skills</h5>
           <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-            Node.js, Express, MongoDB, RESTful APIs, Socket.IO, JWT, Ubuntu, Docker
+            Node.js, Express, MongoDB, RESTful APIs, Socket.IO, JWT, Ubuntu, Docker, NginX
           </p>
         </div>
       </div>

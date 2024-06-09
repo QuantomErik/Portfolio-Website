@@ -34,6 +34,11 @@ body, html {
   transform: translateY(-10px);
 }
 
+.spacer {
+  height: 2rem; 
+}
+
+
 /* body {
   overflow-x: hidden;
 } */
