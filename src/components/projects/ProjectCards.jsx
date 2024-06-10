@@ -42,7 +42,7 @@ const ProjectCards = () => {
     {
       title: "PWA",
       description: "Progressive web application containing a memory game, websocket chat and a weather app.",
-      image: "src/components/projects/pwa.png",
+      image: "/PWA.png",
       liveDemoLink: "https://unique-macaron-88f8eb.netlify.app",
       githubLink: "https://github.com/QuantomErik/PWA",
       tools: [
@@ -60,17 +60,17 @@ const ProjectCards = () => {
         <div className="col-span-2 relative bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden h-96">
           <img className="w-full h-full object-cover absolute inset-0 z-0" src={projects[0].image} alt={projects[0].title} />
           <div className="relative p-6 z-10 bg-opacity-50 bg-black h-full flex flex-col justify-end">
-            <h3 className="font-bold text-2xl mb-2">{projects[0].title}</h3>
+            <h3 className="font-bold text-2xl">{projects[0].title}</h3>
             <p className="text-white text-base">{projects[0].description}</p>
-            <div className="flex space-x-4 mt-4">
-              <a href={projects[0].liveDemoLink} className="text-white hover:text-blue-700 font-bold">
+            <div className="flex space-x-4 mt-2">
+              <a href={projects[0].liveDemoLink} className="text-blue-500 hover:text-blue-700 font-bold">
                 Live Demo
               </a>
-              <a href={projects[0].githubLink} className="text-white hover:text-blue-700 font-bold">
+              <a href={projects[0].githubLink} className="text-blue-500 hover:text-blue-700 font-bold">
                 GitHub
               </a>
             </div>
-            <div className="absolute top-4 right-4 flex flex-col space-y-2">
+            <div className="absolute top-4 right-1 flex flex-col space-y-2">
               {projects[0].tools.map((tool, index) => (
                 <div key={index} className="text-xl text-white">
                   {tool.icon}
@@ -83,7 +83,7 @@ const ProjectCards = () => {
           <img className="w-full h-full object-cover absolute inset-0 z-0" src={projects[1].image} alt={projects[1].title} />
           <div className="relative p-6 z-10 bg-opacity-50 bg-black h-full flex flex-col justify-end">
             <h3 className="font-bold text-2xl mb-2">{projects[1].title}</h3>
-            <p className="text-gray-300 text-base">{projects[1].description}</p>
+            <p className="text-white text-base">{projects[1].description}</p>
             <div className="flex space-x-4 mt-4">
               <a href={projects[1].liveDemoLink} className="text-blue-500 hover:text-blue-700 font-bold">
                 Live Demo
@@ -105,9 +105,10 @@ const ProjectCards = () => {
       <div className="grid grid-cols-3 gap-6">
         <div className="relative bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden h-96">
           <img className="w-full h-full object-cover absolute inset-0 z-0" src={projects[2].image} alt={projects[2].title} />
-          <div className="relative p-6 z-10 bg-opacity-50 bg-black h-full flex flex-col justify-end">
-            <h3 className="font-bold text-2xl mb-2">{projects[2].title}</h3>
-            <p className="text-gray-300 text-base">{projects[2].description}</p>
+          <div className="relative p-2 z-10 bg-opacity-50 bg-black h-full flex flex-col justify-end">
+          
+            <h3 className="font-bold text-2xl">{projects[2].title}</h3>
+            <p className="text-white text-base">{projects[2].description}</p>
             <div className="flex space-x-4 mt-4">
               <a href={projects[2].liveDemoLink} className="text-blue-500 hover:text-blue-700 font-bold">
                 Live Demo
@@ -128,9 +129,9 @@ const ProjectCards = () => {
         <div className="col-span-2 relative bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden h-96">
           <img className="w-full h-full object-cover absolute inset-0 z-0" src={projects[3].image} alt={projects[3].title} />
           <div className="relative p-6 z-10 bg-opacity-50 bg-black h-full flex flex-col justify-end">
-            <h3 className="font-bold text-2xl mb-2">{projects[3].title}</h3>
-            <p className="text-gray-300 text-base">{projects[3].description}</p>
-            <div className="flex space-x-4 mt-4">
+            <h3 className="font-bold text-2xl mb-">{projects[3].title}</h3>
+            <p className="text-white text-base">{projects[3].description}</p>
+            <div className="flex space-x-4 mt-2">
               <a href={projects[3].liveDemoLink} className="text-blue-500 hover:text-blue-700 font-bold">
                 Live Demo
               </a>
