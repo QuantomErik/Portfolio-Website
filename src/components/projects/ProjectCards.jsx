@@ -7,7 +7,7 @@ const ProjectCards = () => {
     {
       title: "Petsee",
       description: "Application for pet monitoring.",
-      image: "src/components/projects/petsee.png",
+      image: "/petsee.png",
       liveDemoLink: "https://cscloud7-95.lnu.se/petsee",
       githubLink: "https://github.com/QuantomErik/Petsee-Pet-Monitor",
       tools: [
