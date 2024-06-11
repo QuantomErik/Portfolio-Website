@@ -63,10 +63,10 @@ const ProjectCards = () => {
             <h3 className="font-bold text-2xl">{projects[0].title}</h3>
             <p className="text-white text-base">{projects[0].description}</p>
             <div className="flex space-x-4 mt-2">
-              <a href={projects[0].liveDemoLink} className="text-blue-500 hover:text-blue-700 font-bold">
+              <a href={projects[0].liveDemoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
                 Live Demo
               </a>
-              <a href={projects[0].githubLink} className="text-blue-500 hover:text-blue-700 font-bold">
+              <a href={projects[0].githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
                 GitHub
               </a>
             </div>
@@ -132,10 +132,10 @@ const ProjectCards = () => {
             <h3 className="font-bold text-2xl mb-">{projects[3].title}</h3>
             <p className="text-white text-base">{projects[3].description}</p>
             <div className="flex space-x-4 mt-2">
-              <a href={projects[3].liveDemoLink} className="text-blue-500 hover:text-blue-700 font-bold">
+              <a href={projects[3].liveDemoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
                 Live Demo
               </a>
-              <a href={projects[3].githubLink} className="text-blue-500 hover:text-blue-700 font-bold">
+              <a href={projects[3].githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
                 GitHub
               </a>
             </div>
