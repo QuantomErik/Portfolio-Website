@@ -24,15 +24,23 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Debug environment
+        run: |
+          echo "HOME directory: $HOME"
+          echo "Creating .ssh directory..."
+          mkdir -p $HOME/.ssh
+          ls -la $HOME/.ssh
+        shell: bash
+
       - name: Deploy to server
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SERVER_IP: ${{ secrets.SERVER_IP }}
           SERVER_USER: ${{ secrets.SERVER_USER }}
         run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan $SERVER_IP >> ~/.ssh/known_hosts
+          echo "$SSH_PRIVATE_KEY" > $HOME/.ssh/id_rsa
+          chmod 600 $HOME/.ssh/id_rsa
+          ssh-keyscan $SERVER_IP >> $HOME/.ssh/known_hosts
           rsync -avz --delete dist/ $SERVER_USER@$SERVER_IP:/var/www/html/dist
           ssh $SERVER_USER@$SERVER_IP 'sudo systemctl restart nginx'
+        shell: bash
