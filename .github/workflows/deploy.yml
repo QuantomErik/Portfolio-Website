@@ -32,15 +32,27 @@ jobs:
           ls -la $HOME/.ssh
         shell: bash
 
-      - name: Deploy to server
+      - name: Add SSH key and setup known hosts
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SERVER_IP: ${{ secrets.SERVER_IP }}
-          SERVER_USER: ${{ secrets.SERVER_USER }}
         run: |
+          echo "Adding SSH key..."
           echo "$SSH_PRIVATE_KEY" > $HOME/.ssh/id_rsa
           chmod 600 $HOME/.ssh/id_rsa
+          echo "SSH key added. Listing .ssh directory..."
+          ls -la $HOME/.ssh
+          echo "Adding known hosts..."
           ssh-keyscan $SERVER_IP >> $HOME/.ssh/known_hosts
+          cat $HOME/.ssh/known_hosts
+        shell: bash
+
+      - name: Deploy to server
+        env:
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+        run: |
+          echo "Deploying to server..."
           rsync -avz --delete dist/ $SERVER_USER@$SERVER_IP:/var/www/html/dist
           ssh $SERVER_USER@$SERVER_IP 'sudo systemctl restart nginx'
         shell: bash
