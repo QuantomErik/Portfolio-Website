@@ -30,16 +30,14 @@ jobs:
           ls -la
           echo "Listing contents of /home/runner/work/Portfolio-Website/Portfolio-Website"
           ls -la /home/runner/work/Portfolio-Website/Portfolio-Website
-          echo "Listing contents of /home/runner/work/Portfolio-Website/Portfolio-Website/html"
-          ls -la /home/runner/work/Portfolio-Website/Portfolio-Website/html
-          echo "Listing contents of /home/runner/work/Portfolio-Website/Portfolio-Website/html/dist"
-          ls -la /home/runner/work/Portfolio-Website/Portfolio-Website/html/dist
+          echo "Listing contents of dist directory"
+          ls -la /home/runner/work/Portfolio-Website/Portfolio-Website/dist
         shell: bash
 
       - name: Add SSH key and setup known hosts
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SERVER_IP: ${{ secrets.SERVER_IP }}
+          SERVER_IP: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           echo "Adding SSH key..."
           echo "$SSH_PRIVATE_KEY" > $HOME/.ssh/id_rsa
@@ -60,6 +58,6 @@ jobs:
           SERVER_USER: ${{ secrets.SERVER_USER }}
         run: |
           echo "Deploying to server..."
-          rsync -avz --delete /home/runner/work/Portfolio-Website/Portfolio-Website/html/dist/ $SERVER_USER@$SERVER_IP:/var/www/html/dist
+          rsync -avz --delete /home/runner/work/Portfolio-Website/Portfolio-Website/dist/ $SERVER_USER@$SERVER_IP:/var/www/html/dist
           ssh $SERVER_USER@$SERVER_IP 'sudo systemctl restart nginx'
         shell: bash
