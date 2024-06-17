@@ -45,7 +45,8 @@ const ProjectCards = () => {
       liveDemoLink: "https://unique-macaron-88f8eb.netlify.app",
       githubLink: "https://github.com/QuantomErik/PWA",
       tools: [
-        { icon: <FaJsSquare />, name: 'JavaScript' }
+        { icon: <FaJsSquare />, name: 'JavaScript' },
+        { icon: <FaNodeJs className="text-green-500" />, name: 'Node.js' },
       ]
     }
   ];
