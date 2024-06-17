@@ -44,6 +44,7 @@ jobs:
           ls -la $HOME/.ssh
           echo "Adding known hosts..."
           ssh-keyscan $SERVER_IP >> $HOME/.ssh/known_hosts
+          echo "Known hosts added. Listing known_hosts file..."
           cat $HOME/.ssh/known_hosts
         shell: bash
 
