@@ -24,12 +24,16 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Debug environment
+      - name: List directory contents for debugging
         run: |
-          echo "HOME directory: $HOME"
-          echo "Creating .ssh directory..."
-          mkdir -p $HOME/.ssh
-          ls -la $HOME/.ssh
+          echo "Listing root directory contents"
+          ls -la
+          echo "Listing contents of /home/runner/work/Portfolio-Website/Portfolio-Website"
+          ls -la /home/runner/work/Portfolio-Website/Portfolio-Website
+          echo "Listing contents of /home/runner/work/Portfolio-Website/Portfolio-Website/html"
+          ls -la /home/runner/work/Portfolio-Website/Portfolio-Website/html
+          echo "Listing contents of /home/runner/work/Portfolio-Website/Portfolio-Website/html/dist"
+          ls -la /home/runner/work/Portfolio-Website/Portfolio-Website/html/dist
         shell: bash
 
       - name: Add SSH key and setup known hosts
@@ -56,6 +60,6 @@ jobs:
           SERVER_USER: ${{ secrets.SERVER_USER }}
         run: |
           echo "Deploying to server..."
-          rsync -avz --delete dist/ $SERVER_USER@$SERVER_IP:/var/www/html/dist
+          rsync -avz --delete /home/runner/work/Portfolio-Website/Portfolio-Website/html/dist/ $SERVER_USER@$SERVER_IP:/var/www/html/dist
           ssh $SERVER_USER@$SERVER_IP 'sudo systemctl restart nginx'
         shell: bash
