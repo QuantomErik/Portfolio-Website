@@ -33,6 +33,10 @@ jobs:
           ls -la /home/runner/work/Portfolio-Website/Portfolio-Website/dist
         shell: bash
 
+      - name: Create .ssh directory
+        run: mkdir -p $HOME/.ssh
+        shell: bash
+
       - name: Add SSH key and setup known hosts
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
