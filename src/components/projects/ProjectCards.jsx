@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaJsSquare, FaReact, FaNodeJs } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
 
