@@ -8,6 +8,7 @@ const ProjectCards = () => {
       description: "Application for pet monitoring.",
       image: "/Petsee.png",
       liveDemoLink: "https://cscloud7-95.lnu.se/petsee",
+      demonstrationLink: "https://youtu.be/SSLkgu32rXA",
       githubLink: "https://github.com/QuantomErik/Petsee-Pet-Monitor",
       tools: [
         { icon: <FaJsSquare className="text-blue-500" />, name: 'JavaScript' },
@@ -65,6 +66,9 @@ const ProjectCards = () => {
             <div className="flex space-x-4 mt-2">
               <a href={projects[0].liveDemoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
                 Live Demo
+              </a>
+              <a href={projects[0].demonstrationLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
+                Demo Video
               </a>
               <a href={projects[0].githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
                 GitHub
