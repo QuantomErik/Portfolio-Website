@@ -34,7 +34,7 @@ export default function Navbar() {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
-                    src="/logo2.webp"
+                    src="src/components/navbar/logo2.webp"
                     alt="Your Company"
                   />
                 </div>
