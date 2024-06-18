@@ -7,7 +7,7 @@ const ProjectCards = () => {
       title: "Petsee",
       description: "Application for pet monitoring.",
       image: "/Petsee.png",
-      liveDemoLink: "https://cscloud7-95.lnu.se/petsee",
+      liveDemoLink: "https://erikyang.se",
       demonstrationLink: "https://youtu.be/SSLkgu32rXA",
       githubLink: "https://github.com/QuantomErik/Petsee-Pet-Monitor",
       tools: [
