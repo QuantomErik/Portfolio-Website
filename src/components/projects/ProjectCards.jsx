@@ -1,6 +1,6 @@
 import { FaJsSquare, FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
-import { SiExpress, SiJest, SiNginx, SiGitlab, SiUbuntu, SiVite, SiWebstorm } from 'react-icons/si';
+import { SiExpress, SiJest, SiNginx, SiGitlab, SiUbuntu, SiVite } from 'react-icons/si';
 
 const ProjectCards = () => {
   const projects = [
@@ -8,7 +8,7 @@ const ProjectCards = () => {
       title: "Petsee",
       description: "Application for pet monitoring.",
       image: "/Petsee.png",
-      liveDemoLink: "https://erikyang.se",
+      liveDemoLink: "https://erikyang.se/petsee",
       demonstrationLink: "https://youtu.be/SSLkgu32rXA",
       githubLink: "https://github.com/QuantomErik/Petsee-Pet-Monitor",
       tools: [
