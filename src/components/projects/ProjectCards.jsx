@@ -24,7 +24,7 @@ const ProjectCards = () => {
       ]
     },
     {
-      title: "Project Two",
+      title: "Test",
       description: "Description for project two.",
       image: "src/components/projects/backend1.jpg",
       liveDemoLink: "#",
