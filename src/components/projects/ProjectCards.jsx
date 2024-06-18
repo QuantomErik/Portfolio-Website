@@ -26,7 +26,7 @@ const ProjectCards = () => {
     {
       title: "Test",
       description: "Description for project two.",
-      image: "src/components/projects/backend1.jpg",
+      image: "frontend.webp",
       liveDemoLink: "#",
       githubLink: "#",
       tools: [
@@ -37,7 +37,7 @@ const ProjectCards = () => {
     {
       title: "Project Three",
       description: "Description for project three.",
-      image: "src/components/projects/backend2.jpg",
+      image: "backend1.jpg",
       liveDemoLink: "#",
       githubLink: "#",
       tools: [
