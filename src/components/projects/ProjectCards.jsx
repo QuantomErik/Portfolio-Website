@@ -1,5 +1,6 @@
-import { FaJsSquare, FaReact, FaNodeJs } from 'react-icons/fa';
+import { FaJsSquare, FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
+import { SiExpress, SiJest, SiNginx, SiGitlab, SiUbuntu, SiVite, SiWebstorm } from 'react-icons/si';
 
 const ProjectCards = () => {
   const projects = [
@@ -14,7 +15,12 @@ const ProjectCards = () => {
         { icon: <FaJsSquare className="text-blue-500" />, name: 'JavaScript' },
         { icon: <FaReact className="text-blue-500" />, name: 'React' },
         { icon: <FaNodeJs className="text-green-500" />, name: 'Node.js' },
-        { icon: <DiMongodb className="text-green-500" />, name: 'MongoDB' }
+        { icon: <DiMongodb className="text-green-500" />, name: 'MongoDB' },
+        { icon: <SiExpress className="text-green-500" />, name: 'Express' },
+      { icon: <SiNginx className="text-red-500" />, name: 'NginX' },
+      { icon: <SiGitlab className="text-red-500" />, name: 'GitLab' },
+      { icon: <SiUbuntu className="text-red-500" />, name: 'Ubuntu' },
+      { icon: <SiJest className="text-purple-500" />, name: 'Jest' },
       ]
     },
     {
@@ -46,8 +52,10 @@ const ProjectCards = () => {
       liveDemoLink: "https://unique-macaron-88f8eb.netlify.app",
       githubLink: "https://github.com/QuantomErik/PWA",
       tools: [
-        { icon: <FaJsSquare />, name: 'JavaScript' },
-        { icon: <FaNodeJs className="text-green-500" />, name: 'Node.js' },
+        { icon: <FaJsSquare className="text-blue-500" />, name: 'JavaScript' },
+        { icon: <FaHtml5 className="text-blue-500" />, name: 'HTML5' },
+        { icon: <FaCss3Alt className="text-blue-500" />, name: 'CSS3' },
+        { icon: <SiVite className="text-purple-500" />, name: 'Vite' },
       ]
     }
   ];
