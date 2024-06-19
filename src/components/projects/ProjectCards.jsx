@@ -47,7 +47,7 @@ const ProjectCards = () => {
     },
     {
       title: "PWA",
-      description: "Progressive web application containing a memory game, websocket chat and a weather app.",
+      description: "Progressive web application containing a memory game, realtime chat and a weather app.",
       image: "/PWA.png",
       liveDemoLink: "https://unique-macaron-88f8eb.netlify.app",
       githubLink: "https://github.com/QuantomErik/PWA",
