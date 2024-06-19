@@ -38,7 +38,7 @@ const Skills = () => {
         <div className="p-5">
           <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Frameworks & Libraries</h5>
           <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-            Redux, Base64, Jest, Testcafe, Bcrypt, Vite
+            Redux, Base64, Jest, Testcafe, Bcrypt
           </p>
         </div>
       </div>
@@ -50,7 +50,7 @@ const Skills = () => {
         <div className="p-5">
           <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">DevOps & Tools</h5>
           <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-            GitHub, GitLab, CI/CD, Docker, NginX, Ubuntu
+            GitHub, GitLab, CI/CD, Docker, NginX, Ubuntu, AWS
           </p>
         </div>
       </div>
