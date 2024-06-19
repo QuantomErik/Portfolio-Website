@@ -6,7 +6,7 @@ const ProjectCards = () => {
   const projects = [
     {
       title: "Petsee",
-      description: "Application for pet monitoring.",
+      description: "Fully responsive pet monitoring application.",
       image: "/Petsee.png",
       liveDemoLink: "https://erikyang.se/petsee",
       demonstrationLink: "https://youtu.be/SSLkgu32rXA",
@@ -24,7 +24,7 @@ const ProjectCards = () => {
       ]
     },
     {
-      title: "Test",
+      title: "Project Two",
       description: "Description for project two.",
       image: "frontend.webp",
       liveDemoLink: "#",
