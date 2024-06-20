@@ -1,25 +1,3 @@
-/* 
-import { HashLink as Link } from 'react-router-hash-link';
-
-function Presentation() {
-  return (
-    <div className="w-full p-0">
-      <Link to="#about" smooth className="block w-full p-40 h-128 mt-20 bg-custom-gradient">
-        <h5 className="mb-5 text-6xl font-bold tracking-tight text-gray-900 dark:text-white">ERIK YANG</h5>
-        <p className="mb-2 font-normal text-4xl text-gray-700 dark:text-white">
-          FULL STACK WEB DEVELOPER
-        </p>
-        <p className="font-normal text-2xl text-gray-700 dark:text-white">
-          Passionate full-stack developer skilled in front-end design and back-end development. I create seamless user experiences and robust applications.
-        </p>
-      </Link>
-    </div>
-  );
-}
-
-export default Presentation;
- */
-
 import { HashLink as Link } from 'react-router-hash-link';
 
 function Presentation() {
