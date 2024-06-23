@@ -14,7 +14,7 @@ const Skills = () => {
         <div className="p-5">
           <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Front-End Skills</h5>
           <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-          JavaScript, HTML, CSS, React, Redux, Flutter/Dart, Bootstrap, Tailwind
+          JavaScript, HTML, CSS, React, Flutter/Dart, Bootstrap, Tailwind
           </p>
         </div>
       </div>
