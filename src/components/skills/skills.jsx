@@ -26,7 +26,8 @@ const Skills = () => {
         <div className="p-5">
           <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Back-End Skills</h5>
           <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-            Node.js, Java, Express, MongoDB, RESTful APIs, WebSocket, JsonWebToken, Micro Services
+            {/* Node.js, Java, Express, MongoDB, Python, Django, PostgreSQL RESTful APIs, WebSocket, JsonWebToken, Micro Services */}
+            Node.js, Express, Python, Django, Java, MongoDB, PostgreSQL, RESTful APIs, WebSocket, Microservices
           </p>
         </div>
       </div>
@@ -38,7 +39,7 @@ const Skills = () => {
         <div className="p-5">
           <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Frameworks & Libraries</h5>
           <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-            Redux, Base64, Jest, Testcafe, Bcrypt
+            Redux, Jest, Testcafe, Bcrypt, WebSocket
           </p>
         </div>
       </div>
