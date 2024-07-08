@@ -39,7 +39,7 @@ const Skills = () => {
         <div className="p-5">
           <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Frameworks & Libraries</h5>
           <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
-            Redux, Jest, Testcafe, Bcrypt, WebSocket
+            Redux, Jest, Testcafe, Bcrypt, WebSocket, Webhooks
           </p>
         </div>
       </div>
