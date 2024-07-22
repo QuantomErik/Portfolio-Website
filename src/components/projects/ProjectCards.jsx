@@ -17,22 +17,26 @@ const ProjectCards = () => {
         { icon: <FaNodeJs className="text-green-500" />, name: 'Node.js' },
         { icon: <DiMongodb className="text-green-500" />, name: 'MongoDB' },
         { icon: <SiExpress className="text-green-500" />, name: 'Express' },
-      { icon: <SiNginx className="text-red-500" />, name: 'NginX' },
-      { icon: <SiGitlab className="text-red-500" />, name: 'GitLab' },
-      { icon: <SiUbuntu className="text-red-500" />, name: 'Ubuntu' },
-      { icon: <SiJest className="text-purple-500" />, name: 'Jest' },
+        { icon: <SiNginx className="text-red-500" />, name: 'NginX' },
+        { icon: <SiGitlab className="text-red-500" />, name: 'GitLab' },
+        { icon: <SiUbuntu className="text-red-500" />, name: 'Ubuntu' },
+        { icon: <SiJest className="text-purple-500" />, name: 'Jest' },
       ]
     },
     {
-      title: "Upcoming Project",
-      /* description: "Description for project two.", */
-      image: "frontend.webp",
-      liveDemoLink: "#",
+      title: "Ongoing Project",
+      description: "E-commerce",
+      image: "/e-commerce1.png",
+      liveDemoLink: "https://www.erikyang.se/ecommerce/",
       githubLink: "#",
       tools: [
         /* { icon: <FaJsSquare />, name: 'JavaScript' },
         { icon: <FaReact />, name: 'React' } */
-      ]
+      ],
+      demoLogin: {
+        username: "erik10",
+        password: "erik10"
+      }
     },
     {
       title: "Upcoming Project",
@@ -41,7 +45,7 @@ const ProjectCards = () => {
       liveDemoLink: "#",
       githubLink: "#",
       tools: [
-       /*  { icon: <FaNodeJs />, name: 'Node.js' },
+        /*  { icon: <FaNodeJs />, name: 'Node.js' },
         { icon: <DiMongodb />, name: 'MongoDB' } */
       ]
     },
@@ -63,103 +67,45 @@ const ProjectCards = () => {
   return (
     <div className="container mx-auto p-6">
 
-<h2 className="text-3xl font-bold mb-10">Projects</h2>
+      <h2 className="text-3xl font-bold mb-10">Projects</h2>
 
-      <div className="grid grid-cols-3 gap-6 mb-6">
-        <div className="col-span-2 relative bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden h-96">
-          <img className="w-full h-full object-cover absolute inset-0 z-0" src={projects[0].image} alt={projects[0].title} />
-          <div className="relative p-6 z-10 bg-opacity-50 bg-black h-full flex flex-col justify-end">
-            <h3 className="font-bold text-2xl">{projects[0].title}</h3>
-            <p className="text-white text-base">{projects[0].description}</p>
-            <div className="flex space-x-4 mt-2">
-              <a href={projects[0].liveDemoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
-                Live Demo
-              </a>
-              <a href={projects[0].demonstrationLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
-                Demo Video
-              </a>
-              <a href={projects[0].githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
-                GitHub
-              </a>
-            </div>
-            <div className="absolute top-4 right-1 flex flex-col space-y-2">
-              {projects[0].tools.map((tool, index) => (
-                <div key={index} className="text-xl text-white">
-                  {tool.icon}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        {projects.map((project, index) => (
+          <div key={index} className="relative bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden h-96">
+            <img className="w-full h-full object-cover absolute inset-0 z-0" src={project.image} alt={project.title} />
+            <div className="relative p-3 z-10 bg-opacity-50 bg-black h-full flex flex-col justify-end">
+              <h3 className="font-bold text-2xl">{project.title}</h3>
+              <p className="text-white text-base">{project.description}</p>
+              <div className="flex space-x-4 mt-2">
+                <a href={project.liveDemoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
+                  Live Demo
+                </a>
+                {project.demonstrationLink && (
+                  <a href={project.demonstrationLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
+                    Demo Video
+                  </a>
+                )}
+                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
+                  GitHub
+                </a>
+              </div>
+              <div className="absolute top-4 right-4 flex flex-col space-y-2">
+                {project.tools.map((tool, toolIndex) => (
+                  <div key={toolIndex} className="text-xl text-white">
+                    {tool.icon}
+                  </div>
+                ))}
+              </div>
+              {project.demoLogin && (
+                <div className="absolute bottom-4 right-4 bg-opacity-70 p-2 rounded text-white text-xs">
+                  <p>Demo login:</p>
+                  <p>username: {project.demoLogin.username}</p>
+                  <p>password: {project.demoLogin.password}</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
-        </div>
-        <div className="relative bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden h-96">
-          <img className="w-full h-full object-cover absolute inset-0 z-0" src={projects[1].image} alt={projects[1].title} />
-          <div className="relative p-6 z-10 bg-opacity-50 bg-black h-full flex flex-col justify-end">
-            <h3 className="font-bold text-2xl mb-2">{projects[1].title}</h3>
-            <p className="text-white text-base">{projects[1].description}</p>
-            <div className="flex space-x-4 mt-4">
-              {/* <a href={projects[1].liveDemoLink} className="text-blue-500 hover:text-blue-700 font-bold">
-                Live Demo
-              </a>
-              <a href={projects[1].githubLink} className="text-blue-500 hover:text-blue-700 font-bold">
-                GitHub
-              </a> */}
-            </div>
-            <div className="absolute top-4 right-4 flex flex-col space-y-2">
-              {projects[1].tools.map((tool, index) => (
-                <div key={index} className="text-xl text-white">
-                  {tool.icon}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-3 gap-6">
-        <div className="relative bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden h-96">
-          <img className="w-full h-full object-cover absolute inset-0 z-0" src={projects[2].image} alt={projects[2].title} />
-          <div className="relative p-2 z-10 bg-opacity-50 bg-black h-full flex flex-col justify-end">
-          
-            <h3 className="font-bold text-2xl">{projects[2].title}</h3>
-            <p className="text-white text-base">{projects[2].description}</p>
-            <div className="flex space-x-4 mt-4">
-              {/* <a href={projects[2].liveDemoLink} className="text-blue-500 hover:text-blue-700 font-bold">
-                Live Demo
-              </a>
-              <a href={projects[2].githubLink} className="text-blue-500 hover:text-blue-700 font-bold">
-                GitHub
-              </a> */}
-            </div>
-            <div className="absolute top-4 right-4 flex flex-col space-y-2">
-              {projects[2].tools.map((tool, index) => (
-                <div key={index} className="text-xl text-white">
-                  {tool.icon}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="col-span-2 relative bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden h-96">
-          <img className="w-full h-full object-cover absolute inset-0 z-0" src={projects[3].image} alt={projects[3].title} />
-          <div className="relative p-6 z-10 bg-opacity-50 bg-black h-full flex flex-col justify-end">
-            <h3 className="font-bold text-2xl mb-">{projects[3].title}</h3>
-            <p className="text-white text-base">{projects[3].description}</p>
-            <div className="flex space-x-4 mt-2">
-              <a href={projects[3].liveDemoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
-                Live Demo
-              </a>
-              <a href={projects[3].githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 font-bold">
-                GitHub
-              </a>
-            </div>
-            <div className="absolute top-4 right-4 flex flex-col space-y-2">
-              {projects[3].tools.map((tool, index) => (
-                <div key={index} className="text-xl text-white">
-                  {tool.icon}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
