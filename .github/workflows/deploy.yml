@@ -48,9 +48,8 @@ jobs:
           echo "SSH key added. Listing .ssh directory..."
           ls -la $HOME/.ssh
           echo "Adding known hosts..."
-          echo "13.48.147.200 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDjvy9psyg6mLrSbxegDdX1BuunmwBsH251CBYxIQndFRWzBmwQYNvPOlvAdXGFoX+0sbUhfMm6vCzdbaCGFOLHxO1+94EPIPjQgpVoOs2nUf/SjsO6GFlJOUwNhadeSBZV1SZ7VPkq7DupUApoOkTrexGPrBoAQ0x8KzOpKND1TqOe/UYcqGZY1+aMu8nXxdMRkuoj7alXQisxp4S8ttKquQ1xWJBYxyRtKNILci6Kw7kSx8fMuppqO323uwLAmUJZhhiWftUfPfpIh4vI9XbfMk2+UL8C+JKhJ3ZOpq7+KUDL0lEsaZLzKncyzm+vri8kkGygIlNBA40RPKQrYm5YzwaPRNK2Huhgpc6xdgcsSGEJ0KCoFjtdYAHUf904MjuiLZxxRQHYt4DFBIucFlu1s6uYvnGzOmdSsTP2Rb6d2JuShPwu+O09BS+2RDkk7tBNoRs16YrmIKHKQO/WoJBZEqtHYaqsnPKDtvY8zFIS28wj8IGUlOU5V6N0jdAscpU=" >> $HOME/.ssh/known_hosts
-          echo "13.48.147.200 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOEa6jchtLX0DXW98LQVTm4wm0dYD7k+krGNDphBETmtuGjPpeCeetbyvqmgW5rCSzI/J0qIN2oUZBvna1tchcg=" >> $HOME/.ssh/known_hosts
-          echo "13.48.147.200 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMdU5/SrIYBCY0MG8sGQ7rgAyYU3mAdNf4QwPXgsYfqb" >> $HOME/.ssh/known_hosts
+          ssh-keyscan -H ec2-13-49-242-192.eu-north-1.compute.amazonaws.com >> $HOME/.ssh/known_hosts
+          ssh-keyscan -H 13.49.242.192 >> $HOME/.ssh/known_hosts
           echo "Known hosts added. Listing known_hosts file..."
           cat $HOME/.ssh/known_hosts
         shell: bash
