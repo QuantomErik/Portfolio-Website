@@ -28,7 +28,7 @@ const ProjectCards = () => {
       description: "E-commerce",
       image: "/e-commerce1.png",
       liveDemoLink: "https://www.erikyang.se/ecommerce/",
-      githubLink: "#",
+      githubLink: "https://github.com/QuantomErik/E-commerce",
       tools: [
         /* { icon: <FaJsSquare />, name: 'JavaScript' },
         { icon: <FaReact />, name: 'React' } */
