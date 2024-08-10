@@ -1,6 +1,6 @@
-import { FaJsSquare, FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa';
-import { DiMongodb } from 'react-icons/di';
-import { SiExpress, SiJest, SiNginx, SiGitlab, SiUbuntu, SiVite } from 'react-icons/si';
+import { FaJsSquare, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPython } from 'react-icons/fa';
+import { DiMongodb, DiPostgresql } from 'react-icons/di';
+import { SiExpress, SiJest, SiNginx, SiGitlab, SiUbuntu, SiVite, SiDjango, SiAmazonaws } from 'react-icons/si';
 
 const ProjectCards = () => {
   const projects = [
@@ -30,8 +30,14 @@ const ProjectCards = () => {
       liveDemoLink: "https://www.erikyang.se/ecommerce/",
       githubLink: "https://github.com/QuantomErik/E-commerce",
       tools: [
-        /* { icon: <FaJsSquare />, name: 'JavaScript' },
-        { icon: <FaReact />, name: 'React' } */
+        { icon: <FaJsSquare className="text-blue-500" />, name: 'JavaScript' },
+        { icon: <FaReact className="text-blue-500" />, name: 'React' },
+        { icon: <FaPython className="text-green-500" />, name: 'Python' },
+        { icon: <SiDjango className="text-green-500" />, name: 'Django' },
+        { icon: <DiPostgresql className="text-green-500" />, name: 'PostgreSQL' },
+        { icon: <SiNginx className="text-red-500" />, name: 'NginX' },
+        { icon: <SiUbuntu className="text-red-500" />, name: 'Ubuntu' },
+        { icon: <SiAmazonaws className="text-red-500" />, name: 'AWS' },
       ],
       demoLogin: {
         username: "erik10",
