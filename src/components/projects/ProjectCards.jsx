@@ -24,8 +24,8 @@ const ProjectCards = () => {
       ]
     },
     {
-      title: "Ongoing Project",
-      description: "E-commerce",
+      title: "Interstellar",
+      description: "E-commerce, allowing users to browse, purchase products and manage their accounts.",
       image: "/e-commerce1.png",
       liveDemoLink: "https://www.erikyang.se/ecommerce/",
       githubLink: "https://github.com/QuantomErik/E-commerce",
@@ -97,7 +97,7 @@ const ProjectCards = () => {
                 ))}
               </div>
               {project.demoLogin && (
-                <div className="absolute bottom-4 right-4 bg-opacity-70 p-2 rounded text-white text-xs">
+                <div className="absolute bottom-0 right-2 bg-opacity-70 p-2 rounded text-white text-xs">
                   <p>Demo login:</p>
                   <p>username: {project.demoLogin.username}</p>
                   <p>password: {project.demoLogin.password}</p>
