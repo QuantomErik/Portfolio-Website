@@ -12,10 +12,12 @@ function Presentation() {
           ERIK YANG
         </h5>
         <p className="mb-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-gray-700 dark:text-white">
-          FULL STACK WEB <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">DEVELOPER</span>
+          {/* FULL STACK WEB <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">DEVELOPER</span> */}
+          SOFTWARE <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">ENGINEER</span>
         </p>
         <p className="text-md sm:text-lg md:text-xl lg:text-2xl font-normal text-gray-700 dark:text-white">
-          Passionate developer skilled in front-end design and back-end development. I create seamless user experiences and robust applications.
+          {/* Passionate developer skilled in front-end design and back-end development. I create seamless user experiences and robust applications. */}
+          Dedicated software engineer with expertise in designing, developing, and optimizing both front-end and back-end systems. Committed to building efficient, scalable solutions and delivering exceptional user experiences.
         </p>
       </Link>
     </div>
