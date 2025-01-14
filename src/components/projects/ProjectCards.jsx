@@ -9,7 +9,7 @@ const ProjectCards = () => {
       description: "Fully responsive pet monitoring application.",
       image: "/Petsee.png",
       liveDemoLink: "https://erikyang.se/petsee",
-      demonstrationLink: "https://youtu.be/SSLkgu32rXA",
+      /* demonstrationLink: "https://youtu.be/SSLkgu32rXA", */
       githubLink: "https://github.com/QuantomErik/Petsee-Pet-Monitor",
       tools: [
         { icon: <FaJsSquare className="text-blue-500" />, name: 'JavaScript' },
